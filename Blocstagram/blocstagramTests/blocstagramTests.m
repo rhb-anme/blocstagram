@@ -1,19 +1,19 @@
 //
-//  blocstagramTests.m
-//  blocstagramTests
+//  BlocstagramTests.m
+//  BlocstagramTests
 //
-//  Created by RH Blanchfield on 3/8/15.
+//  Created by RH Blanchfield on 3/9/15.
 //  Copyright (c) 2015 bloc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface blocstagramTests : XCTestCase
+@interface BlocstagramTests : XCTestCase
 
 @end
 
-@implementation blocstagramTests
+@implementation BlocstagramTests
 
 - (void)setUp {
     [super setUp];
