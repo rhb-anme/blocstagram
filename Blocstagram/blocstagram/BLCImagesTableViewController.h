@@ -1,14 +1,14 @@
 //
 //  BLCImagesTableViewController.h
-//  blocstagram
+//  Blocstagram
 //
 //  Created by RH Blanchfield on 3/9/15.
 //  Copyright (c) 2015 bloc. All rights reserved.
 //
 
-#ifndef __blocstagram__BLCImagesTableViewController__
-#define __blocstagram__BLCImagesTableViewController__
+#import <UIKit/UIKit.h>
 
-#include <stdio.h>
+@interface ImagesTableViewController : UITableViewController
+@property (nonatomic, strong) NSMutableArray* images;
 
-#endif /* defined(__blocstagram__BLCImagesTableViewController__) */
+@end
