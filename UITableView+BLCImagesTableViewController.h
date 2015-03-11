@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UITableView+BLCImagesTableViewController.h
 //  Blocstagram
 //
 //  Created by RH Blanchfield on 3/9/15.
@@ -11,4 +11,3 @@
 @interface UITableView (BLCImagesTableViewController)
 @property (nonatomic, strong) NSMutableArray *images;
 @end
-
