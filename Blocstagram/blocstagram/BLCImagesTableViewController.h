@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 bloc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
+#import <UIKit/UIKit.h>
 //Note for overwrite to GIT
 
 @interface ImagesTableViewController : UITableViewController
-@property (nonatomic, strong) NSMutableArray* images;
+@property (nonatomic, strong) NSMutableArray *images;
 
 @end

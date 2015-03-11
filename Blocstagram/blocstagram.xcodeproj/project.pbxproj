@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F56EE1781AAFEC700099367E /* NSObject+BLCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE1771AAFEC700099367E /* NSObject+BLCUser.m */; };
+		F56EE17B1AAFED970099367E /* NSObject+BLCMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE17A1AAFED970099367E /* NSObject+BLCMedia.m */; };
+		F56EE17E1AAFEF570099367E /* NSObject+BLCComment.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE17D1AAFEF570099367E /* NSObject+BLCComment.m */; };
+		F56EE1811AAFF15D0099367E /* NSObject+BLCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE1801AAFF15D0099367E /* NSObject+BLCDataSource.m */; };
 		F5BB88DD1AAEB84E0005C283 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5BB88DC1AAEB84E0005C283 /* QuartzCore.framework */; };
 		F5BE65B21AAE3BB1006A386B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BE65B11AAE3BB1006A386B /* main.m */; };
 		F5BE65B51AAE3BB1006A386B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BE65B41AAE3BB1006A386B /* AppDelegate.m */; };
@@ -25,6 +29,7 @@
 		F5BE65EB1AAE3E9C006A386B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F5BE65E11AAE3E9C006A386B /* 2.png */; };
 		F5BE65EC1AAE3E9C006A386B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F5BE65E21AAE3E9C006A386B /* 1.png */; };
 		F5BE65EF1AAE42ED006A386B /* BLCImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BE65EE1AAE42ED006A386B /* BLCImagesTableViewController.m */; };
+		F5F6379D1AB00D300070ABB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F6379C1AB00D300070ABB5 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F56EE1761AAFEC700099367E /* NSObject+BLCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+BLCUser.h"; path = "blocstagram/NSObject+BLCUser.h"; sourceTree = SOURCE_ROOT; };
+		F56EE1771AAFEC700099367E /* NSObject+BLCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+BLCUser.m"; path = "blocstagram/NSObject+BLCUser.m"; sourceTree = SOURCE_ROOT; };
+		F56EE1791AAFED970099367E /* NSObject+BLCMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+BLCMedia.h"; path = "blocstagram/NSObject+BLCMedia.h"; sourceTree = SOURCE_ROOT; };
+		F56EE17A1AAFED970099367E /* NSObject+BLCMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+BLCMedia.m"; path = "blocstagram/NSObject+BLCMedia.m"; sourceTree = SOURCE_ROOT; };
+		F56EE17C1AAFEF570099367E /* NSObject+BLCComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+BLCComment.h"; path = "blocstagram/NSObject+BLCComment.h"; sourceTree = SOURCE_ROOT; };
+		F56EE17D1AAFEF570099367E /* NSObject+BLCComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+BLCComment.m"; path = "blocstagram/NSObject+BLCComment.m"; sourceTree = SOURCE_ROOT; };
+		F56EE17F1AAFF15D0099367E /* NSObject+BLCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+BLCDataSource.h"; path = "blocstagram/NSObject+BLCDataSource.h"; sourceTree = SOURCE_ROOT; };
+		F56EE1801AAFF15D0099367E /* NSObject+BLCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+BLCDataSource.m"; path = "blocstagram/NSObject+BLCDataSource.m"; sourceTree = SOURCE_ROOT; };
 		F5BB88DC1AAEB84E0005C283 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F5BE65AC1AAE3BB1006A386B /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BE65B01AAE3BB1006A386B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +75,7 @@
 		F5BE65E21AAE3E9C006A386B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		F5BE65ED1AAE42ED006A386B /* BLCImagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCImagesTableViewController.h; sourceTree = "<group>"; };
 		F5BE65EE1AAE42ED006A386B /* BLCImagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCImagesTableViewController.m; sourceTree = "<group>"; };
+		F5F6379C1AB00D300070ABB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F6379D1AB00D300070ABB5 /* UIKit.framework in Frameworks */,
 				F5BB88DD1AAEB84E0005C283 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +101,7 @@
 		F5BE65A31AAE3BB1006A386B = {
 			isa = PBXGroup;
 			children = (
+				F5F6379C1AB00D300070ABB5 /* UIKit.framework */,
 				F5BB88DC1AAEB84E0005C283 /* QuartzCore.framework */,
 				F5BE65AE1AAE3BB1006A386B /* Blocstagram */,
 				F5BE65C81AAE3BB1006A386B /* BlocstagramTests */,
@@ -108,6 +124,14 @@
 				F5BE65D81AAE3E85006A386B /* images */,
 				F5BE65B31AAE3BB1006A386B /* AppDelegate.h */,
 				F5BE65B41AAE3BB1006A386B /* AppDelegate.m */,
+				F56EE17C1AAFEF570099367E /* NSObject+BLCComment.h */,
+				F56EE17F1AAFF15D0099367E /* NSObject+BLCDataSource.h */,
+				F56EE1801AAFF15D0099367E /* NSObject+BLCDataSource.m */,
+				F56EE17D1AAFEF570099367E /* NSObject+BLCComment.m */,
+				F56EE1791AAFED970099367E /* NSObject+BLCMedia.h */,
+				F56EE17A1AAFED970099367E /* NSObject+BLCMedia.m */,
+				F56EE1761AAFEC700099367E /* NSObject+BLCUser.h */,
+				F56EE1771AAFEC700099367E /* NSObject+BLCUser.m */,
 				F5BE65ED1AAE42ED006A386B /* BLCImagesTableViewController.h */,
 				F5BE65EE1AAE42ED006A386B /* BLCImagesTableViewController.m */,
 				F5BE65B91AAE3BB1006A386B /* Main.storyboard */,
@@ -271,7 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F56EE17B1AAFED970099367E /* NSObject+BLCMedia.m in Sources */,
+				F56EE17E1AAFEF570099367E /* NSObject+BLCComment.m in Sources */,
+				F56EE1781AAFEC700099367E /* NSObject+BLCUser.m in Sources */,
 				F5BE65B51AAE3BB1006A386B /* AppDelegate.m in Sources */,
+				F56EE1811AAFF15D0099367E /* NSObject+BLCDataSource.m in Sources */,
 				F5BE65B21AAE3BB1006A386B /* main.m in Sources */,
 				F5BE65EF1AAE42ED006A386B /* BLCImagesTableViewController.m in Sources */,
 			);
@@ -349,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -384,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -395,9 +423,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = Blocstagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = "$(CACHE_ROOT)/Blocstagram/Blocstagram-prefix.pch";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -406,9 +437,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = Blocstagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = "$(CACHE_ROOT)/Blocstagram/Blocstagram-prefix.pch";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
