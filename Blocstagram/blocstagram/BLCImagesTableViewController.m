@@ -7,6 +7,11 @@
 //
 
 #import "BLCImagesTableViewController.h"
+#import "NSObject+BLCDataSource.h"
+#import "NSObject+BLCMedia.h"
+#import "NSObject+BLCUser.h"
+#import "NSObject+BLCComment.h"
+#import "UITableViewCell+BLCMediaTableViewCell.h"
 
 @interface ImagesTableViewController () < UIViewControllerTransitioningDelegate>
 
@@ -30,7 +35,7 @@
             
         }
     }
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"imageCell"];
+    [self.tableView registerClass:[BLCMediaTableViewCell class] forCellReuseIdentifier:@"mediaCell"];
     
 }
 
@@ -60,8 +65,11 @@
 
 - (CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIImage *image = self.images[indexPath.row];
-    return (CGRectGetWidth(self.view.frame) / image.size.width) * image.size.height;
+    BLCMedia *item = [BLCDataSource sharedInstance].mediaItems[indexPath.row];
+    //UIImage *image = self.images[indexPath.row];
+    //return (CGRectGetWidth(self.view.frame) / image.size.width) * image.size.height;
+    //return 300 + (image.size.height / image.size.width * CGRectGetWidth(self.view.frame));
+    return [BLCMediaTableViewCell heightForMediaItem:item width:CGRectGetWidth(self.view.frame)];
 }
 
 
@@ -74,27 +82,29 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    static NSInteger imageViewTag = 1234;
-    UIImageView *imageView = (UIImageView*)[cell.contentView viewWithTag:imageViewTag];
+    //static NSInteger imageViewTag = 1234;
+    //UIImageView *imageView = (UIImageView*)[cell.contentView viewWithTag:imageViewTag];
     
-    if (!imageView) {
+    //if (!imageView) {
         // This is a new cell, it doesn't have an image view yet
-        imageView = [[UIImageView alloc] init];
-        imageView.contentMode = UIViewContentModeScaleToFill;
+        //imageView = [[UIImageView alloc] init];
+        //imageView.contentMode = UIViewContentModeScaleToFill;
         
-        imageView.frame = cell.contentView.bounds;
-        imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        //imageView.frame = cell.contentView.bounds;
+        //imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         
-        imageView.tag = imageViewTag;
-        [cell.contentView addSubview:imageView];
-    }
+        //imageView.tag = imageViewTag;
+        //[cell.contentView addSubview:imageView];
+    //}
     
-    UIImage *image = self.images[indexPath.row];
-    imageView.image = image;
+    //UIImage *image = self.images[indexPath.row];
+    //imageView.image = image;
     
+    BLCMediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
+    cell.mediaItem = [BLCDataSource sharedInstance].mediaItems[indexPath.row];
     return cell;
     
     
