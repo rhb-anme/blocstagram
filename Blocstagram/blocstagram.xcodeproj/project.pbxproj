@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F507C0D21AB20C35003D4F31 /* UITableViewCell+BLCMediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F507C0D11AB20C35003D4F31 /* UITableViewCell+BLCMediaTableViewCell.m */; };
 		F56EE1781AAFEC700099367E /* NSObject+BLCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE1771AAFEC700099367E /* NSObject+BLCUser.m */; };
 		F56EE17B1AAFED970099367E /* NSObject+BLCMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE17A1AAFED970099367E /* NSObject+BLCMedia.m */; };
 		F56EE17E1AAFEF570099367E /* NSObject+BLCComment.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE17D1AAFEF570099367E /* NSObject+BLCComment.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F507C0D01AB20C35003D4F31 /* UITableViewCell+BLCMediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+BLCMediaTableViewCell.h"; path = "../UITableViewCell+BLCMediaTableViewCell.h"; sourceTree = "<group>"; };
+		F507C0D11AB20C35003D4F31 /* UITableViewCell+BLCMediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+BLCMediaTableViewCell.m"; path = "../UITableViewCell+BLCMediaTableViewCell.m"; sourceTree = "<group>"; };
 		F56EE1761AAFEC700099367E /* NSObject+BLCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+BLCUser.h"; path = "blocstagram/NSObject+BLCUser.h"; sourceTree = SOURCE_ROOT; };
 		F56EE1771AAFEC700099367E /* NSObject+BLCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+BLCUser.m"; path = "blocstagram/NSObject+BLCUser.m"; sourceTree = SOURCE_ROOT; };
 		F56EE1791AAFED970099367E /* NSObject+BLCMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+BLCMedia.h"; path = "blocstagram/NSObject+BLCMedia.h"; sourceTree = SOURCE_ROOT; };
@@ -134,6 +137,8 @@
 				F56EE1771AAFEC700099367E /* NSObject+BLCUser.m */,
 				F5BE65ED1AAE42ED006A386B /* BLCImagesTableViewController.h */,
 				F5BE65EE1AAE42ED006A386B /* BLCImagesTableViewController.m */,
+				F507C0D01AB20C35003D4F31 /* UITableViewCell+BLCMediaTableViewCell.h */,
+				F507C0D11AB20C35003D4F31 /* UITableViewCell+BLCMediaTableViewCell.m */,
 				F5BE65B91AAE3BB1006A386B /* Main.storyboard */,
 				F5BE65BC1AAE3BB1006A386B /* Images.xcassets */,
 				F5BE65BE1AAE3BB1006A386B /* LaunchScreen.xib */,
@@ -241,7 +246,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F5BE65A71AAE3BB1006A386B /* Build configuration list for PBXProject "Blocstagram" */;
+			buildConfigurationList = F5BE65A71AAE3BB1006A386B /* Build configuration list for PBXProject "blocstagram" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -297,6 +302,7 @@
 			files = (
 				F56EE17B1AAFED970099367E /* NSObject+BLCMedia.m in Sources */,
 				F56EE17E1AAFEF570099367E /* NSObject+BLCComment.m in Sources */,
+				F507C0D21AB20C35003D4F31 /* UITableViewCell+BLCMediaTableViewCell.m in Sources */,
 				F56EE1781AAFEC700099367E /* NSObject+BLCUser.m in Sources */,
 				F5BE65B51AAE3BB1006A386B /* AppDelegate.m in Sources */,
 				F56EE1811AAFF15D0099367E /* NSObject+BLCDataSource.m in Sources */,
@@ -484,7 +490,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F5BE65A71AAE3BB1006A386B /* Build configuration list for PBXProject "Blocstagram" */ = {
+		F5BE65A71AAE3BB1006A386B /* Build configuration list for PBXProject "blocstagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5BE65CD1AAE3BB1006A386B /* Debug */,

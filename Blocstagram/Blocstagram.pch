@@ -1,0 +1,19 @@
+//
+//  Blocstagram.pch
+//  Blocstagram
+//
+//  Created by RH Blanchfield on 3/10/15.
+//  Copyright (c) 2015 bloc. All rights reserved.
+//
+
+//#ifdef _OBJC_
+//#ifndef Blocstagram_Blocstagram_pch
+//#define Blocstagram_Blocstagram_pch
+#import <UIKit/UIKit.h>
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
