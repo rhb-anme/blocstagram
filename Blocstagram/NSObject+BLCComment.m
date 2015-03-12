@@ -9,6 +9,6 @@
 #import "NSObject+BLCComment.h"
 #import "NSObject+BLCUser.h"
 
-@implementation NSObject (BLCComment)
+@implementation BLCComment : NSObject
 
 @end

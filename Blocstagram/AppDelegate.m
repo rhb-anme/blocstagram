@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BLCImagesTableViewController.h"
 
+//Thank you Ben.
 
 @interface AppDelegate ()
 
