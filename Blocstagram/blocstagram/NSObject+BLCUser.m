@@ -8,6 +8,5 @@
 
 #import "NSObject+BLCUser.h"
 
-@implementation NSObject (BLCUser)
-
+@implementation BLCUser : NSObject
 @end
