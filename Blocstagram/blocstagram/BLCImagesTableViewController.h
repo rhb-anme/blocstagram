@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 //Note for overwrite to GIT
 
-@interface ImagesTableViewController : UITableViewController
+@interface BLCImagesTableViewController : UITableViewController
 @property (nonatomic, strong) NSMutableArray *images;
 
 @end

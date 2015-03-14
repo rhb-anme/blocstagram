@@ -13,12 +13,15 @@
 #import "NSObject+BLCComment.h"
 #import "UITableViewCell+BLCMediaTableViewCell.h"
 
-@interface ImagesTableViewController () < UIViewControllerTransitioningDelegate>
+@interface BLCImagesTableViewController () < UIViewControllerTransitioningDelegate>
 
+{
+    BLCMediaTableViewCell  *cell;
+}
 
 @end
 
-@implementation ImagesTableViewController
+@implementation BLCImagesTableViewController
 
 
 
@@ -69,6 +72,8 @@
     //UIImage *image = self.images[indexPath.row];
     //return (CGRectGetWidth(self.view.frame) / image.size.width) * image.size.height;
     //return 300 + (image.size.height / image.size.width * CGRectGetWidth(self.view.frame));
+    
+    
     return [BLCMediaTableViewCell heightForMediaItem:item width:CGRectGetWidth(self.view.frame)];
 }
 
@@ -102,8 +107,7 @@
     
     //UIImage *image = self.images[indexPath.row];
     //imageView.image = image;
-    
-    BLCMediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
+    cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
     cell.mediaItem = [BLCDataSource sharedInstance].mediaItems[indexPath.row];
     return cell;
     
