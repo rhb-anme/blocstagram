@@ -7,11 +7,11 @@
 //
 
 #import "BLCImagesTableViewController.h"
-#import "NSObject+BLCDataSource.h"
-#import "NSObject+BLCMedia.h"
-#import "NSObject+BLCUser.h"
-#import "NSObject+BLCComment.h"
-#import "UITableViewCell+BLCMediaTableViewCell.h"
+#import "BLCDataSource.h"
+#import "BLCMedia.h"
+#import "BLCUser.h"
+#import "BLCComment.h"
+#import "BLCMediaTableViewCell.h"
 
 @interface BLCImagesTableViewController () < UIViewControllerTransitioningDelegate>
 

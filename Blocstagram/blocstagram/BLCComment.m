@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 bloc. All rights reserved.
 //
 
-#import "NSObject+BLCComment.h"
-#import "NSObject+BLCUser.h"
+#import "BLCComment.h"
+#import "BLCUser.h"
 
 @implementation BLCComment : NSObject
 

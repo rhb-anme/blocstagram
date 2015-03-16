@@ -7,10 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "UITableViewCell+BLCMediaTableViewCell.h"
-#import "NSObject+BLCMedia.h"
-#import "NSObject+BLCComment.h"
-#import "NSObject+BLCUser.h"
+#import "BLCMediaTableViewCell.h"
+#import "BLCMedia.h"
+#import "BLCComment.h"
+#import "BLCUser.h"
 
 
 //@implementation UITableViewCell (BLCMediaTableViewCell)

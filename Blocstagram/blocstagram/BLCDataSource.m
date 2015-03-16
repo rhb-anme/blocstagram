@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 bloc. All rights reserved.
 //
 
-#import "NSObject+BLCDataSource.h"
-#import "NSObject+BLCUser.h"
-#import "NSObject+BLCMedia.h"
-#import "NSObject+BLCComment.h"
+#import "BLCDataSource.h"
+#import "BLCUser.h"
+#import "BLCMedia.h"
+#import "BLCComment.h"
 
 @interface BLCDataSource (){
     NSMutableArray *_mediaItems;
@@ -24,6 +24,9 @@
 @end
 
 @implementation BLCDataSource
++ (NSString *) instagramClientID {
+    return @"<your client ID>";
+}
 
 + (instancetype) sharedInstance {
     static dispatch_once_t once;
