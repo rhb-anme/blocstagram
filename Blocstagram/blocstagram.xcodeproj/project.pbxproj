@@ -127,9 +127,9 @@
 				F5BE65D81AAE3E85006A386B /* images */,
 				F5BE65B31AAE3BB1006A386B /* AppDelegate.h */,
 				F5BE65B41AAE3BB1006A386B /* AppDelegate.m */,
-				F56EE17C1AAFEF570099367E /* NSObject+BLCComment.h */,
 				F56EE17F1AAFF15D0099367E /* NSObject+BLCDataSource.h */,
 				F56EE1801AAFF15D0099367E /* NSObject+BLCDataSource.m */,
+				F56EE17C1AAFEF570099367E /* NSObject+BLCComment.h */,
 				F56EE17D1AAFEF570099367E /* NSObject+BLCComment.m */,
 				F56EE1791AAFED970099367E /* NSObject+BLCMedia.h */,
 				F56EE17A1AAFED970099367E /* NSObject+BLCMedia.m */,
@@ -431,7 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = Blocstagram/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SHARED_PRECOMPS_DIR = "$(CACHE_ROOT)/Blocstagram/Blocstagram-prefix.pch";
@@ -445,7 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = Blocstagram/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SHARED_PRECOMPS_DIR = "$(CACHE_ROOT)/Blocstagram/Blocstagram-prefix.pch";
