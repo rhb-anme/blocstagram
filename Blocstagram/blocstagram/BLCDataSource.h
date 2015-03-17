@@ -26,5 +26,5 @@ typedef void (^BLCNewItemCompletionBlock)(NSError *error);
 - (NSUInteger) countOfMediaItems;
 - (void) removeObjectFromMediaItemsAtIndex:(NSUInteger)index;
 
-
+@property (nonatomic, strong, readonly) NSString *accessToken;
 @end

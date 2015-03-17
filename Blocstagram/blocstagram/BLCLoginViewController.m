@@ -20,7 +20,7 @@ NSString *const BLCLoginViewControllerDidGetAccessTokenNotification = @"BLCLogin
 
 
 - (NSString *)redirectURI {
-    return @"<http://www.rhblanchfield.com>";
+    return @"http://www.bloc.io";
 }
 - (void)loadView {
     UIWebView *webView = [[UIWebView alloc] init];
@@ -28,6 +28,8 @@ NSString *const BLCLoginViewControllerDidGetAccessTokenNotification = @"BLCLogin
     
     self.webView = webView;
     self.view = webView;
+    
+    self.title = @"Login";
 }
 - (void)viewDidLoad
 {
@@ -61,6 +63,7 @@ NSString *const BLCLoginViewControllerDidGetAccessTokenNotification = @"BLCLogin
         }
     }
 }
+
 - (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSString *urlString = request.URL.absoluteString;
     if ([urlString hasPrefix:[self redirectURI]]) {
