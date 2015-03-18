@@ -45,6 +45,10 @@
 - (void) viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:YES];
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backBarButton)];
+    self.navigationItem.leftBarButtonItem = backButton;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -229,5 +233,4 @@
     }
   }
 }
-
 @end
