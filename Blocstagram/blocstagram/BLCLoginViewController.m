@@ -44,6 +44,7 @@ NSString *const BLCLoginViewControllerDidGetAccessTokenNotification = @"BLCLogin
         [self.webView loadRequest:request];
     }
 }
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -51,6 +52,7 @@ NSString *const BLCLoginViewControllerDidGetAccessTokenNotification = @"BLCLogin
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backBarButton)];
     self.navigationItem.leftBarButtonItem = backButton;
 }
+
 - (void) dealloc {
     // Removing this line causes a weird flickering effect when you relaunch the app after logging in, as the web view is briefly displayed, automatically authenticates with cookies, returns the access token, and dismisses the login view, sometimes in less than a second.
     [self clearInstagramCookies];
@@ -93,4 +95,5 @@ NSString *const BLCLoginViewControllerDidGetAccessTokenNotification = @"BLCLogin
         [self.webView loadRequest:request];
     }
 }
+
 @end
