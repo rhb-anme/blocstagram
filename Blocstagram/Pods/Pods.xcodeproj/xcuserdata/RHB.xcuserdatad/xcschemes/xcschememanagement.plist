@@ -17,12 +17,20 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+<<<<<<< HEAD
 		<key>86FF265EEA1DE2059C2C7D12</key>
+=======
+		<key>A7A19B4197A9E90AB37E8868</key>
+>>>>>>> install-cocopods
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+<<<<<<< HEAD
 		<key>E22232F79255CC2779ED7E85</key>
+=======
+		<key>CEC348BD2341D42519CCCEFC</key>
+>>>>>>> install-cocopods
 		<dict>
 			<key>primary</key>
 			<true/>
