@@ -11,25 +11,24 @@
 #import "BLCMedia.h"
 #import "BLCComment.h"
 #import "BLCLoginViewController.h"
+#import <UICKeyChainStore.h>
 
-@interface BLCDataSource (){
+@interface BLCDataSource () {
     NSMutableArray *_mediaItems;
 }
 
 @property (nonatomic, strong) NSString *accessToken;
-@property (nonatomic, strong) NSArray *mediaItems;
+@property (nonatomic, strong) NSMutableArray *mediaItems;
 
 @property (nonatomic, assign) BOOL isRefreshing;
 @property (nonatomic, assign) BOOL isLoadingOlderItems;
- @property (nonatomic, assign) BOOL thereAreNoMoreOlderMessages;
-@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, assign) BOOL thereAreNoMoreOlderMessages;
+
 
 @end
 
+
 @implementation BLCDataSource
-+ (NSString *) instagramClientID {
-    return @"3d380dd34a394811ae3befffa7c7db7f";
-}
 
 + (instancetype) sharedInstance {
     static dispatch_once_t once;
@@ -37,36 +36,49 @@
     dispatch_once(&once, ^{
         sharedInstance = [[self alloc] init];
     });
-        return sharedInstance;
-    }
+    return sharedInstance;
+}
 
 - (instancetype) init {
     self = [super init];
     
     if (self) {
-        [self registerForAccessTokenNotification];;
+        self.accessToken = [UICKeyChainStore stringForKey:@"access token"];
+        
+        if (!self.accessToken) {
+            [self registerForAccessTokenNotification];
+        } else {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                NSString *fullPath = [self pathForFilename:NSStringFromSelector(@selector(mediaItems))];
+                NSArray *storedMediaItems = [NSKeyedUnarchiver unarchiveObjectWithFile:fullPath];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (storedMediaItems.count > 1) {
+                        NSMutableArray *mutableMediaItems = [storedMediaItems mutableCopy];
+                        
+                        [self willChangeValueForKey:@"mediaItems"];
+                        self.mediaItems = mutableMediaItems;
+                        [self didChangeValueForKey:@"mediaItems"];
+                    } else {
+                        [self populateDataWithParameters:nil completionHandler:nil];
+                    }
+                });
+            });
+        }
     }
     
     return self;
-
 }
+
 - (void) registerForAccessTokenNotification {
     [[NSNotificationCenter defaultCenter] addObserverForName:BLCLoginViewControllerDidGetAccessTokenNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
         self.accessToken = note.object;
-        
+        [UICKeyChainStore setString:self.accessToken forKey:@"access token"];
         
         // Got a token, populate the initial data
         [self populateDataWithParameters:nil completionHandler:nil];
     }];
 }
-/*
-- (void) registerForAccessTokenNotification {
-    [[NSNotificationCenter defaultCenter] addObserverForName:BLCLoginViewControllerDidGetAccessTokenNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
-        self.accessToken = note.object;
-    }];
-}
-*/
-
 
 #pragma mark - Key/Value Observing
 
@@ -81,6 +93,7 @@
 - (NSArray *) mediaItemsAtIndexes:(NSIndexSet *)indexes {
     return [self.mediaItems objectsAtIndexes:indexes];
 }
+
 - (void) insertObject:(BLCMedia *)object inMediaItemsAtIndex:(NSUInteger)index {
     [_mediaItems insertObject:object atIndex:index];
 }
@@ -92,15 +105,18 @@
 - (void) replaceObjectInMediaItemsAtIndex:(NSUInteger)index withObject:(id)object {
     [_mediaItems replaceObjectAtIndex:index withObject:object];
 }
+
 - (void) deleteMediaItem:(BLCMedia *)item {
     NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
     [mutableArrayWithKVO removeObject:item];
 }
 
+#pragma mark - Completion Handler
+
 - (void) requestNewItemsWithCompletionHandler:(BLCNewItemCompletionBlock)completionHandler {
+    self.thereAreNoMoreOlderMessages = NO;
     if (self.isRefreshing == NO) {
         self.isRefreshing = YES;
-        // Need to add images here
         
         NSString *minID = [[self.mediaItems firstObject] idNumber];
         NSDictionary *parameters = @{@"min_id": minID};
@@ -115,26 +131,30 @@
     }
 }
 
-
 - (void) requestOldItemsWithCompletionHandler:(BLCNewItemCompletionBlock)completionHandler {
-        if (self.isLoadingOlderItems == NO && self.thereAreNoMoreOlderMessages == NO) {
-            self.isLoadingOlderItems = YES;
+    if (self.isLoadingOlderItems == NO && self.thereAreNoMoreOlderMessages == NO) {
+        self.isLoadingOlderItems = YES;
         
-            NSString *maxID = [[self.mediaItems lastObject] idNumber];
-            NSDictionary *parameters = @{@"max_id": maxID};
+        // Need to add images here
+        NSString *maxID = [[self.mediaItems lastObject] idNumber];
+        NSDictionary *parameters = @{@"max_id": maxID};
         
-            [self populateDataWithParameters:parameters completionHandler:^(NSError *error) {
-                self.isLoadingOlderItems = NO;
-                
-                if (completionHandler) {
-                    completionHandler(error);
-                }
-            }];
-        }
+        [self populateDataWithParameters:parameters completionHandler:^(NSError *error) {
+            self.isLoadingOlderItems = NO;
+            
+            if (completionHandler) {
+                completionHandler(error);
+            }
+        }];
+    }
+}
+
+#pragma mark - Instagram API
++ (NSString *) instagramClientID {
+    return @"962837538f9b45e19bb4d56313da0c9b";
 }
 
 - (void) populateDataWithParameters:(NSDictionary *)parameters completionHandler:(BLCNewItemCompletionBlock)completionHandler {
-     self.thereAreNoMoreOlderMessages = NO;
     if (self.accessToken) {
         // only try to get the data if there's an access token
         
@@ -175,9 +195,9 @@
                         });
                     }
                 } else if (completionHandler) {
-                  dispatch_async(dispatch_get_main_queue(), ^{
-                      completionHandler(webError);
-                  });
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        completionHandler(webError);
+                    });
                 }
             }
         });
@@ -185,7 +205,6 @@
 }
 
 - (void) parseDataFromFeedDictionary:(NSDictionary *) feedDictionary fromRequestWithParameters:(NSDictionary *)parameters {
-    NSLog(@"%@", feedDictionary);
     NSArray *mediaArray = feedDictionary[@"data"];
     
     NSMutableArray *tmpMediaItems = [NSMutableArray array];
@@ -196,6 +215,25 @@
         if (mediaItem) {
             [tmpMediaItems addObject:mediaItem];
             [self downloadImageForMediaItem:mediaItem];
+        }
+        
+        if (tmpMediaItems.count > 0) {
+            // Write the changes to disk
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                NSUInteger numberOfItemsToSave = MIN(self.mediaItems.count, 50);
+                NSArray *mediaItemsToSave = [self.mediaItems subarrayWithRange:NSMakeRange(0, numberOfItemsToSave)];
+                
+                NSString *fullPath = [self pathForFilename:NSStringFromSelector(@selector(mediaItems))];
+                NSData *mediaItemData = [NSKeyedArchiver archivedDataWithRootObject:mediaItemsToSave];
+                
+                NSError *dataError;
+                BOOL wroteSuccessfully = [mediaItemData writeToFile:fullPath options:NSDataWritingAtomic | NSDataWritingFileProtectionCompleteUnlessOpen error:&dataError];
+                
+                if (!wroteSuccessfully) {
+                    NSLog(@"Couldn't write file: %@", dataError);
+                }
+            });
+            
         }
     }
     
@@ -251,4 +289,12 @@
         });
     }
 }
+
+- (NSString *) pathForFilename:(NSString *) filename {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths firstObject];
+    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:filename];
+    return dataPath;
+}
+
 @end

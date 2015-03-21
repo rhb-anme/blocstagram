@@ -10,7 +10,8 @@
 #import <UIKit/UIKit.h>
 //import UIKit to get rid of UIImage error
 
-@interface BLCUser : NSObject
+//@interface BLCUser : NSObject
+@interface BLCUser : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *idNumber;
 @property (nonatomic, strong) NSString *userName;

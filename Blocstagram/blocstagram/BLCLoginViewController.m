@@ -20,7 +20,7 @@ NSString *const BLCLoginViewControllerDidGetAccessTokenNotification = @"BLCLogin
 
 
 - (NSString *)redirectURI {
-    return @"http://www.bloc.io";
+    return @"http://bloc.io";
 }
 - (void)loadView {
     UIWebView *webView = [[UIWebView alloc] init];
