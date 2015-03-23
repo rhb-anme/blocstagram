@@ -78,7 +78,7 @@ NSString *const BLCLoginViewControllerDidGetAccessTokenNotification = @"BLCLogin
 }
 
 - (NSString *)redirectURI {
-    return @"http://www.applymap.com";
+    return @"http://www.bloc.io";
 }
 
 - (void) dealloc {

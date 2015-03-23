@@ -50,7 +50,7 @@
 }
 
 + (NSString *) instagramClientID {
-    return @"cd3c2dc846a84f05a1f96cef123c5e25";
+    return @"3d380dd34a394811ae3befffa7c7db7f";
 }
 
 //infinite scroll
