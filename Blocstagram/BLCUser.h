@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-//import UIKit to get rid of UIImage error
 
-//@interface BLCUser : NSObject
 @interface BLCUser : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *idNumber;
@@ -19,5 +17,7 @@
 @property (nonatomic, strong) NSURL *profilePictureURL;
 @property (nonatomic, strong) UIImage *profilePicture;
 
- - (instancetype) initWithDictionary:(NSDictionary *)userDictionary;
+- (instancetype) initWithDictionary: (NSDictionary *)userDictionary;
+
+
 @end

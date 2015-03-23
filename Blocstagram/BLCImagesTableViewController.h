@@ -8,9 +8,13 @@
 
 
 #import <UIKit/UIKit.h>
-//Note for overwrite to GIT
+#import "BLCDataSource.h"
+#import "BLCMedia.h"
+#import "BLCUser.h"
+#import "BLCComment.h"
 
 @interface BLCImagesTableViewController : UITableViewController
-@property (nonatomic, strong) NSMutableArray *images;
+
+
 
 @end
