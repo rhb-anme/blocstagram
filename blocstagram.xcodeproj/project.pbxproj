@@ -11,6 +11,8 @@
 		F507C0D21AB20C35003D4F31 /* BLCMediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F507C0D11AB20C35003D4F31 /* BLCMediaTableViewCell.m */; };
 		F5159DD41AC31F7D0063A476 /* BLCCameraToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = F5159DD31AC31F7D0063A476 /* BLCCameraToolbar.m */; };
 		F53E1BF01AB678E8009E2C40 /* BLCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53E1BEF1AB678E8009E2C40 /* BLCLoginViewController.m */; };
+		F56D635F1AC3462000A14EFE /* BLCCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F56D635E1AC3462000A14EFE /* BLCCameraViewController.m */; };
+		F56D63651AC35BE400A14EFE /* UIImage+BLCImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F56D63641AC35BE400A14EFE /* UIImage+BLCImageUtilities.m */; };
 		F56EE1781AAFEC700099367E /* BLCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE1771AAFEC700099367E /* BLCUser.m */; };
 		F56EE17B1AAFED970099367E /* BLCMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE17A1AAFED970099367E /* BLCMedia.m */; };
 		F56EE17E1AAFEF570099367E /* BLCComment.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE17D1AAFEF570099367E /* BLCComment.m */; };
@@ -59,6 +61,10 @@
 		F5159DD31AC31F7D0063A476 /* BLCCameraToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCCameraToolbar.m; path = blocstagram/BLCCameraToolbar.m; sourceTree = SOURCE_ROOT; };
 		F53E1BEE1AB678E8009E2C40 /* BLCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCLoginViewController.h; path = blocstagram/BLCLoginViewController.h; sourceTree = SOURCE_ROOT; };
 		F53E1BEF1AB678E8009E2C40 /* BLCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCLoginViewController.m; path = blocstagram/BLCLoginViewController.m; sourceTree = SOURCE_ROOT; };
+		F56D635D1AC3462000A14EFE /* BLCCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCCameraViewController.h; path = blocstagram/BLCCameraViewController.h; sourceTree = SOURCE_ROOT; };
+		F56D635E1AC3462000A14EFE /* BLCCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCCameraViewController.m; path = blocstagram/BLCCameraViewController.m; sourceTree = SOURCE_ROOT; };
+		F56D63631AC35BE400A14EFE /* UIImage+BLCImageUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+BLCImageUtilities.h"; path = "blocstagram/UIImage+BLCImageUtilities.h"; sourceTree = SOURCE_ROOT; };
+		F56D63641AC35BE400A14EFE /* UIImage+BLCImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+BLCImageUtilities.m"; path = "blocstagram/UIImage+BLCImageUtilities.m"; sourceTree = SOURCE_ROOT; };
 		F56EE1761AAFEC700099367E /* BLCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCUser.h; path = blocstagram/BLCUser.h; sourceTree = SOURCE_ROOT; };
 		F56EE1771AAFEC700099367E /* BLCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCUser.m; path = blocstagram/BLCUser.m; sourceTree = SOURCE_ROOT; };
 		F56EE1791AAFED970099367E /* BLCMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCMedia.h; path = blocstagram/BLCMedia.h; sourceTree = SOURCE_ROOT; };
@@ -171,6 +177,8 @@
 				F5BE65B41AAE3BB1006A386B /* AppDelegate.m */,
 				F5159DD21AC31F7D0063A476 /* BLCCameraToolbar.h */,
 				F5159DD31AC31F7D0063A476 /* BLCCameraToolbar.m */,
+				F56D635D1AC3462000A14EFE /* BLCCameraViewController.h */,
+				F56D635E1AC3462000A14EFE /* BLCCameraViewController.m */,
 				F5A52B501AC0A40C006B56C1 /* BLCCircleSpinnerView.h */,
 				F5A52B511AC0A40C006B56C1 /* BLCCircleSpinnerView.m */,
 				F5A52B531AC0A826006B56C1 /* BLCLikeButton.h */,
@@ -187,6 +195,8 @@
 				F56EE17A1AAFED970099367E /* BLCMedia.m */,
 				F507C0D01AB20C35003D4F31 /* BLCMediaTableViewCell.h */,
 				F507C0D11AB20C35003D4F31 /* BLCMediaTableViewCell.m */,
+				F56D63631AC35BE400A14EFE /* UIImage+BLCImageUtilities.h */,
+				F56D63641AC35BE400A14EFE /* UIImage+BLCImageUtilities.m */,
 				F56EE1761AAFEC700099367E /* BLCUser.h */,
 				F584CFEF1AC2219A0061CBBF /* BLCComposeCommentView.h */,
 				F584CFF01AC2219A0061CBBF /* BLCComposeCommentView.m */,
@@ -391,6 +401,7 @@
 			files = (
 				F56EE17B1AAFED970099367E /* BLCMedia.m in Sources */,
 				F56EE17E1AAFEF570099367E /* BLCComment.m in Sources */,
+				F56D63651AC35BE400A14EFE /* UIImage+BLCImageUtilities.m in Sources */,
 				F53E1BF01AB678E8009E2C40 /* BLCLoginViewController.m in Sources */,
 				F507C0D21AB20C35003D4F31 /* BLCMediaTableViewCell.m in Sources */,
 				F56EE1781AAFEC700099367E /* BLCUser.m in Sources */,
@@ -399,6 +410,7 @@
 				F570DBCF1ABE1830009CD633 /* BLCMediaFullScreenViewController.m in Sources */,
 				F5BE65B21AAE3BB1006A386B /* main.m in Sources */,
 				F5A52B521AC0A40C006B56C1 /* BLCCircleSpinnerView.m in Sources */,
+				F56D635F1AC3462000A14EFE /* BLCCameraViewController.m in Sources */,
 				F5A52B551AC0A826006B56C1 /* BLCLikeButton.m in Sources */,
 				F584CFF11AC2219A0061CBBF /* BLCComposeCommentView.m in Sources */,
 				F5BE65EF1AAE42ED006A386B /* BLCImagesTableViewController.m in Sources */,
