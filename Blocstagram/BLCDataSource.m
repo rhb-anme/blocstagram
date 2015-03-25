@@ -312,22 +312,27 @@
         
         [self.instagramOperationManager POST:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             mediaItem.likeState = BLCLikeStateLiked;
+            NSLog(@"%@",responseObject);
+            mediaItem.likes = [NSString stringWithFormat:@"%d",[mediaItem.likes intValue]+1];
             [self reloadMediaItem:mediaItem];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             mediaItem.likeState = BLCLikeStateNotLiked;
+            
             [self reloadMediaItem:mediaItem];
         }];
         
     } else if (mediaItem.likeState == BLCLikeStateLiked) {
         
         mediaItem.likeState = BLCLikeStateUnliking;
-        
         [self.instagramOperationManager DELETE:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
             mediaItem.likeState = BLCLikeStateNotLiked;
+            mediaItem.likes = [NSString stringWithFormat:@"%d",[mediaItem.likes intValue]-1];
             [self reloadMediaItem:mediaItem];
+            NSLog(@"Liked");
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             mediaItem.likeState = BLCLikeStateLiked;
             [self reloadMediaItem:mediaItem];
+            NSLog(@"%@",[error description]);
         }];
         
     }
@@ -339,6 +344,7 @@
     NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
     NSUInteger index = [mutableArrayWithKVO indexOfObject:mediaItem];
     [mutableArrayWithKVO replaceObjectAtIndex:index withObject:mediaItem];
+    NSLog(@"Awesome %@",mediaItem.likes);
 }
 
 #pragma mark - Comments
