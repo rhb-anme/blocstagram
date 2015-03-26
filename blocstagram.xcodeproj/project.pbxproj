@@ -18,6 +18,9 @@
 		F56EE17E1AAFEF570099367E /* BLCComment.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE17D1AAFEF570099367E /* BLCComment.m */; };
 		F56EE1811AAFF15D0099367E /* BLCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F56EE1801AAFF15D0099367E /* BLCDataSource.m */; };
 		F570DBCF1ABE1830009CD633 /* BLCMediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F570DBCE1ABE1830009CD633 /* BLCMediaFullScreenViewController.m */; };
+		F5831DCF1AC388A300C9462C /* BLCCropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = F5831DCE1AC388A300C9462C /* BLCCropBox.m */; };
+		F5831DD21AC38CEE00C9462C /* BLCCropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5831DD11AC38CEE00C9462C /* BLCCropImageViewController.m */; };
+		F5831DD51AC390FF00C9462C /* BLCImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5831DD41AC390FF00C9462C /* BLCImageLibraryViewController.m */; };
 		F584CFF11AC2219A0061CBBF /* BLCComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F584CFF01AC2219A0061CBBF /* BLCComposeCommentView.m */; };
 		F5A52B521AC0A40C006B56C1 /* BLCCircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A52B511AC0A40C006B56C1 /* BLCCircleSpinnerView.m */; };
 		F5A52B551AC0A826006B56C1 /* BLCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A52B541AC0A826006B56C1 /* BLCLikeButton.m */; };
@@ -75,6 +78,12 @@
 		F56EE1801AAFF15D0099367E /* BLCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCDataSource.m; path = blocstagram/BLCDataSource.m; sourceTree = SOURCE_ROOT; };
 		F570DBCD1ABE1830009CD633 /* BLCMediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCMediaFullScreenViewController.h; path = blocstagram/BLCMediaFullScreenViewController.h; sourceTree = SOURCE_ROOT; };
 		F570DBCE1ABE1830009CD633 /* BLCMediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCMediaFullScreenViewController.m; path = blocstagram/BLCMediaFullScreenViewController.m; sourceTree = SOURCE_ROOT; };
+		F5831DCD1AC388A300C9462C /* BLCCropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCCropBox.h; path = blocstagram/BLCCropBox.h; sourceTree = SOURCE_ROOT; };
+		F5831DCE1AC388A300C9462C /* BLCCropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCCropBox.m; path = blocstagram/BLCCropBox.m; sourceTree = SOURCE_ROOT; };
+		F5831DD01AC38CEE00C9462C /* BLCCropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCCropImageViewController.h; path = blocstagram/BLCCropImageViewController.h; sourceTree = SOURCE_ROOT; };
+		F5831DD11AC38CEE00C9462C /* BLCCropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCCropImageViewController.m; path = blocstagram/BLCCropImageViewController.m; sourceTree = SOURCE_ROOT; };
+		F5831DD31AC390FF00C9462C /* BLCImageLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCImageLibraryViewController.h; path = blocstagram/BLCImageLibraryViewController.h; sourceTree = SOURCE_ROOT; };
+		F5831DD41AC390FF00C9462C /* BLCImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCImageLibraryViewController.m; path = blocstagram/BLCImageLibraryViewController.m; sourceTree = SOURCE_ROOT; };
 		F584CFEF1AC2219A0061CBBF /* BLCComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCComposeCommentView.h; path = blocstagram/BLCComposeCommentView.h; sourceTree = SOURCE_ROOT; };
 		F584CFF01AC2219A0061CBBF /* BLCComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCComposeCommentView.m; path = blocstagram/BLCComposeCommentView.m; sourceTree = SOURCE_ROOT; };
 		F5A52B501AC0A40C006B56C1 /* BLCCircleSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCCircleSpinnerView.h; path = blocstagram/BLCCircleSpinnerView.h; sourceTree = SOURCE_ROOT; };
@@ -181,28 +190,34 @@
 				F56D635E1AC3462000A14EFE /* BLCCameraViewController.m */,
 				F5A52B501AC0A40C006B56C1 /* BLCCircleSpinnerView.h */,
 				F5A52B511AC0A40C006B56C1 /* BLCCircleSpinnerView.m */,
-				F5A52B531AC0A826006B56C1 /* BLCLikeButton.h */,
-				F5A52B541AC0A826006B56C1 /* BLCLikeButton.m */,
+				F5831DCD1AC388A300C9462C /* BLCCropBox.h */,
+				F5831DCE1AC388A300C9462C /* BLCCropBox.m */,
+				F5831DD01AC38CEE00C9462C /* BLCCropImageViewController.h */,
+				F5831DD11AC38CEE00C9462C /* BLCCropImageViewController.m */,
 				F56EE17C1AAFEF570099367E /* BLCComment.h */,
 				F56EE17D1AAFEF570099367E /* BLCComment.m */,
+				F584CFEF1AC2219A0061CBBF /* BLCComposeCommentView.h */,
+				F584CFF01AC2219A0061CBBF /* BLCComposeCommentView.m */,
 				F56EE17F1AAFF15D0099367E /* BLCDataSource.h */,
 				F56EE1801AAFF15D0099367E /* BLCDataSource.m */,
 				F5BE65ED1AAE42ED006A386B /* BLCImagesTableViewController.h */,
 				F5BE65EE1AAE42ED006A386B /* BLCImagesTableViewController.m */,
+				F5A52B531AC0A826006B56C1 /* BLCLikeButton.h */,
+				F5A52B541AC0A826006B56C1 /* BLCLikeButton.m */,
 				F53E1BEE1AB678E8009E2C40 /* BLCLoginViewController.h */,
 				F53E1BEF1AB678E8009E2C40 /* BLCLoginViewController.m */,
 				F56EE1791AAFED970099367E /* BLCMedia.h */,
 				F56EE17A1AAFED970099367E /* BLCMedia.m */,
-				F507C0D01AB20C35003D4F31 /* BLCMediaTableViewCell.h */,
-				F507C0D11AB20C35003D4F31 /* BLCMediaTableViewCell.m */,
-				F56D63631AC35BE400A14EFE /* UIImage+BLCImageUtilities.h */,
-				F56D63641AC35BE400A14EFE /* UIImage+BLCImageUtilities.m */,
-				F56EE1761AAFEC700099367E /* BLCUser.h */,
-				F584CFEF1AC2219A0061CBBF /* BLCComposeCommentView.h */,
-				F584CFF01AC2219A0061CBBF /* BLCComposeCommentView.m */,
-				F56EE1771AAFEC700099367E /* BLCUser.m */,
 				F570DBCD1ABE1830009CD633 /* BLCMediaFullScreenViewController.h */,
 				F570DBCE1ABE1830009CD633 /* BLCMediaFullScreenViewController.m */,
+				F5831DD31AC390FF00C9462C /* BLCImageLibraryViewController.h */,
+				F5831DD41AC390FF00C9462C /* BLCImageLibraryViewController.m */,
+				F507C0D01AB20C35003D4F31 /* BLCMediaTableViewCell.h */,
+				F507C0D11AB20C35003D4F31 /* BLCMediaTableViewCell.m */,
+				F56EE1761AAFEC700099367E /* BLCUser.h */,
+				F56EE1771AAFEC700099367E /* BLCUser.m */,
+				F56D63631AC35BE400A14EFE /* UIImage+BLCImageUtilities.h */,
+				F56D63641AC35BE400A14EFE /* UIImage+BLCImageUtilities.m */,
 				F5BE65B91AAE3BB1006A386B /* Main.storyboard */,
 				F5BE65BC1AAE3BB1006A386B /* Images.xcassets */,
 				F5BE65BE1AAE3BB1006A386B /* LaunchScreen.xib */,
@@ -400,6 +415,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F56EE17B1AAFED970099367E /* BLCMedia.m in Sources */,
+				F5831DD21AC38CEE00C9462C /* BLCCropImageViewController.m in Sources */,
+				F5831DD51AC390FF00C9462C /* BLCImageLibraryViewController.m in Sources */,
 				F56EE17E1AAFEF570099367E /* BLCComment.m in Sources */,
 				F56D63651AC35BE400A14EFE /* UIImage+BLCImageUtilities.m in Sources */,
 				F53E1BF01AB678E8009E2C40 /* BLCLoginViewController.m in Sources */,
@@ -410,6 +427,7 @@
 				F570DBCF1ABE1830009CD633 /* BLCMediaFullScreenViewController.m in Sources */,
 				F5BE65B21AAE3BB1006A386B /* main.m in Sources */,
 				F5A52B521AC0A40C006B56C1 /* BLCCircleSpinnerView.m in Sources */,
+				F5831DCF1AC388A300C9462C /* BLCCropBox.m in Sources */,
 				F56D635F1AC3462000A14EFE /* BLCCameraViewController.m in Sources */,
 				F5A52B551AC0A826006B56C1 /* BLCLikeButton.m in Sources */,
 				F584CFF11AC2219A0061CBBF /* BLCComposeCommentView.m in Sources */,
