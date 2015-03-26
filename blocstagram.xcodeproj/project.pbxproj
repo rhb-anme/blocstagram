@@ -21,6 +21,8 @@
 		F5831DCF1AC388A300C9462C /* BLCCropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = F5831DCE1AC388A300C9462C /* BLCCropBox.m */; };
 		F5831DD21AC38CEE00C9462C /* BLCCropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5831DD11AC38CEE00C9462C /* BLCCropImageViewController.m */; };
 		F5831DD51AC390FF00C9462C /* BLCImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5831DD41AC390FF00C9462C /* BLCImageLibraryViewController.m */; };
+		F5831DD81AC3AA1200C9462C /* BLCPostToInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5831DD71AC3AA1200C9462C /* BLCPostToInstagramViewController.m */; };
+		F5831DDB1AC3B9A800C9462C /* BLCFilterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5831DDA1AC3B9A800C9462C /* BLCFilterCollectionViewCell.m */; };
 		F584CFF11AC2219A0061CBBF /* BLCComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F584CFF01AC2219A0061CBBF /* BLCComposeCommentView.m */; };
 		F5A52B521AC0A40C006B56C1 /* BLCCircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A52B511AC0A40C006B56C1 /* BLCCircleSpinnerView.m */; };
 		F5A52B551AC0A826006B56C1 /* BLCLikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A52B541AC0A826006B56C1 /* BLCLikeButton.m */; };
@@ -84,6 +86,10 @@
 		F5831DD11AC38CEE00C9462C /* BLCCropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCCropImageViewController.m; path = blocstagram/BLCCropImageViewController.m; sourceTree = SOURCE_ROOT; };
 		F5831DD31AC390FF00C9462C /* BLCImageLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCImageLibraryViewController.h; path = blocstagram/BLCImageLibraryViewController.h; sourceTree = SOURCE_ROOT; };
 		F5831DD41AC390FF00C9462C /* BLCImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCImageLibraryViewController.m; path = blocstagram/BLCImageLibraryViewController.m; sourceTree = SOURCE_ROOT; };
+		F5831DD61AC3AA1200C9462C /* BLCPostToInstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCPostToInstagramViewController.h; path = blocstagram/BLCPostToInstagramViewController.h; sourceTree = SOURCE_ROOT; };
+		F5831DD71AC3AA1200C9462C /* BLCPostToInstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCPostToInstagramViewController.m; path = blocstagram/BLCPostToInstagramViewController.m; sourceTree = SOURCE_ROOT; };
+		F5831DD91AC3B9A800C9462C /* BLCFilterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCFilterCollectionViewCell.h; path = blocstagram/BLCFilterCollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		F5831DDA1AC3B9A800C9462C /* BLCFilterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCFilterCollectionViewCell.m; path = blocstagram/BLCFilterCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		F584CFEF1AC2219A0061CBBF /* BLCComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCComposeCommentView.h; path = blocstagram/BLCComposeCommentView.h; sourceTree = SOURCE_ROOT; };
 		F584CFF01AC2219A0061CBBF /* BLCComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCComposeCommentView.m; path = blocstagram/BLCComposeCommentView.m; sourceTree = SOURCE_ROOT; };
 		F5A52B501AC0A40C006B56C1 /* BLCCircleSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCCircleSpinnerView.h; path = blocstagram/BLCCircleSpinnerView.h; sourceTree = SOURCE_ROOT; };
@@ -200,6 +206,10 @@
 				F584CFF01AC2219A0061CBBF /* BLCComposeCommentView.m */,
 				F56EE17F1AAFF15D0099367E /* BLCDataSource.h */,
 				F56EE1801AAFF15D0099367E /* BLCDataSource.m */,
+				F5831DD91AC3B9A800C9462C /* BLCFilterCollectionViewCell.h */,
+				F5831DDA1AC3B9A800C9462C /* BLCFilterCollectionViewCell.m */,
+				F5831DD31AC390FF00C9462C /* BLCImageLibraryViewController.h */,
+				F5831DD41AC390FF00C9462C /* BLCImageLibraryViewController.m */,
 				F5BE65ED1AAE42ED006A386B /* BLCImagesTableViewController.h */,
 				F5BE65EE1AAE42ED006A386B /* BLCImagesTableViewController.m */,
 				F5A52B531AC0A826006B56C1 /* BLCLikeButton.h */,
@@ -210,10 +220,10 @@
 				F56EE17A1AAFED970099367E /* BLCMedia.m */,
 				F570DBCD1ABE1830009CD633 /* BLCMediaFullScreenViewController.h */,
 				F570DBCE1ABE1830009CD633 /* BLCMediaFullScreenViewController.m */,
-				F5831DD31AC390FF00C9462C /* BLCImageLibraryViewController.h */,
-				F5831DD41AC390FF00C9462C /* BLCImageLibraryViewController.m */,
 				F507C0D01AB20C35003D4F31 /* BLCMediaTableViewCell.h */,
 				F507C0D11AB20C35003D4F31 /* BLCMediaTableViewCell.m */,
+				F5831DD61AC3AA1200C9462C /* BLCPostToInstagramViewController.h */,
+				F5831DD71AC3AA1200C9462C /* BLCPostToInstagramViewController.m */,
 				F56EE1761AAFEC700099367E /* BLCUser.h */,
 				F56EE1771AAFEC700099367E /* BLCUser.m */,
 				F56D63631AC35BE400A14EFE /* UIImage+BLCImageUtilities.h */,
@@ -414,10 +424,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5831DD81AC3AA1200C9462C /* BLCPostToInstagramViewController.m in Sources */,
 				F56EE17B1AAFED970099367E /* BLCMedia.m in Sources */,
 				F5831DD21AC38CEE00C9462C /* BLCCropImageViewController.m in Sources */,
 				F5831DD51AC390FF00C9462C /* BLCImageLibraryViewController.m in Sources */,
 				F56EE17E1AAFEF570099367E /* BLCComment.m in Sources */,
+				F5831DDB1AC3B9A800C9462C /* BLCFilterCollectionViewCell.m in Sources */,
 				F56D63651AC35BE400A14EFE /* UIImage+BLCImageUtilities.m in Sources */,
 				F53E1BF01AB678E8009E2C40 /* BLCLoginViewController.m in Sources */,
 				F507C0D21AB20C35003D4F31 /* BLCMediaTableViewCell.m in Sources */,
