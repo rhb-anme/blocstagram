@@ -92,6 +92,7 @@
 		F5831DDA1AC3B9A800C9462C /* BLCFilterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCFilterCollectionViewCell.m; path = blocstagram/BLCFilterCollectionViewCell.m; sourceTree = SOURCE_ROOT; };
 		F584CFEF1AC2219A0061CBBF /* BLCComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCComposeCommentView.h; path = blocstagram/BLCComposeCommentView.h; sourceTree = SOURCE_ROOT; };
 		F584CFF01AC2219A0061CBBF /* BLCComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCComposeCommentView.m; path = blocstagram/BLCComposeCommentView.m; sourceTree = SOURCE_ROOT; };
+		F58B0BD61AC46570003B64D0 /* Blocstagram-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Blocstagram-Prefix.pch"; path = "blocstagram/Blocstagram-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		F5A52B501AC0A40C006B56C1 /* BLCCircleSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCCircleSpinnerView.h; path = blocstagram/BLCCircleSpinnerView.h; sourceTree = SOURCE_ROOT; };
 		F5A52B511AC0A40C006B56C1 /* BLCCircleSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCCircleSpinnerView.m; path = blocstagram/BLCCircleSpinnerView.m; sourceTree = SOURCE_ROOT; };
 		F5A52B531AC0A826006B56C1 /* BLCLikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCLikeButton.h; path = blocstagram/BLCLikeButton.h; sourceTree = SOURCE_ROOT; };
@@ -232,6 +233,7 @@
 				F5BE65BC1AAE3BB1006A386B /* Images.xcassets */,
 				F5BE65BE1AAE3BB1006A386B /* LaunchScreen.xib */,
 				F5BE65AF1AAE3BB1006A386B /* Supporting Files */,
+				F58B0BD61AC46570003B64D0 /* Blocstagram-Prefix.pch */,
 			);
 			path = Blocstagram;
 			sourceTree = "<group>";
@@ -568,6 +570,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Blocstagram/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -583,6 +586,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Blocstagram/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
